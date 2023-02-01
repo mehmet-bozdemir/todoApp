@@ -16,7 +16,133 @@
                 </svg>
             </div>
 
-            <input type="search" placeholder="Find a TODO" class="w-full rounded-xl bg-gray-200 px-4 py-2 pl-8">
+            <input type="search" placeholder="Find a TODO" class="w-full placeholder-gray-900 rounded-xl bg-gray-200 px-4 py-2 pl-8">
+        </div>
+    </div>
+
+    <div class="todos-container space-y-6 my-6">
+        <div class="todo-container rounded-xl bg-gray-100 hover:shadow-md transition duration-200 ease-in">
+            <div class="flex px-2 py-6 justify-between">
+                <div class="mx-4 flex items-center justify-center w-1/5">
+                    <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dG9kb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" alt="todo" class="w-22 h-22 rounded-xl">
+                </div>
+                <div class="mx-4 w-4/5">
+                    <div class="flex items-center">
+                        <h4 class="text-xl font-semibold">
+                            A random todo title can go here
+                        </h4>
+                        <div class="flex items-center space-x-2">
+                            <div class="bg-green-300 text-xs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
+                                Done
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-gray-600 mt-3">
+                        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                    </div>
+                    <div class="flex items-center justify-between mt-6">
+                        <div class="flex items-center text-xs font-semibold space-x-2">
+                            <div>10 hours ago</div>
+                            <div>&bull;</div>
+                            <div>Category 1</div>
+                            <div>&bull;</div>
+                            <div>3 comments</div>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <div class="bg-gray-200 text-xs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
+                                Edit
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <div class="bg-gray-200 text-xs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
+                                Delete
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="todo-container rounded-xl bg-gray-100 hover:shadow-md transition duration-200 ease-in">
+            <div class="flex px-2 py-6 justify-between">
+                <div class="mx-4 flex items-center justify-center w-1/5">
+                    <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dG9kb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" alt="todo" class="w-22 h-22 rounded-xl">
+                </div>
+                <div class="mx-4 w-4/5">
+                    <div class="flex items-center">
+                        <h4 class="text-xl font-semibold">
+                            A random todo title can go here
+                        </h4>
+                        <div class="flex items-center space-x-2">
+                            <div class="bg-amber-300 text-xs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
+                                Pending
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-gray-600 mt-3">
+                        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                    </div>
+                    <div class="flex items-center justify-between mt-6">
+                        <div class="flex items-center text-xs font-semibold space-x-2">
+                            <div>10 hours ago</div>
+                            <div>&bull;</div>
+                            <div>Category 1</div>
+                            <div>&bull;</div>
+                            <div>3 comments</div>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <div class="bg-gray-200 text-xs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
+                                Edit
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <div class="bg-gray-200 text-xs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
+                                Delete
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="todo-container rounded-xl bg-gray-100 hover:shadow-md transition duration-200 ease-in">
+            <div class="flex px-2 py-6 justify-between">
+                <div class="mx-4 flex items-center justify-center w-1/5">
+                    <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dG9kb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" alt="todo" class="w-22 h-22 rounded-xl">
+                </div>
+                <div class="mx-4 w-4/5">
+                    <div class="flex items-center">
+                        <h4 class="text-xl font-semibold">
+                            A random todo title can go here
+                        </h4>
+                        <div class="flex items-center space-x-2">
+                            <div class="bg-green-300 text-xs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
+                                Done
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-gray-600 mt-3">
+                        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                    </div>
+                    <div class="flex items-center justify-between mt-6">
+                        <div class="flex items-center text-xs font-semibold space-x-2">
+                            <div>10 hours ago</div>
+                            <div>&bull;</div>
+                            <div>Category 1</div>
+                            <div>&bull;</div>
+                            <div>3 comments</div>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <div class="bg-gray-200 text-xs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
+                                Edit
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <div class="bg-gray-200 text-xs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
+                                Delete
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </x-app-layout>
