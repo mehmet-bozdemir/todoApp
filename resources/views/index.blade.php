@@ -1,7 +1,7 @@
 <x-app-layout>
     <div class="filters flex space-x-6">
         <div class="w-1/3">
-            <select name="category" id="category" class="w-full rounded-xl bg-gray-200 px-4 py-2">
+            <select name="category" id="category" class="w-full rounded-xl bg-gray-100 px-4 py-2">
                 <option value="Actegory One"> Category one</option>
                 <option value="Actegory Two"> Category two</option>
                 <option value="Actegory Three"> Category three</option>
@@ -16,7 +16,7 @@
                 </svg>
             </div>
 
-            <input type="search" placeholder="Find a TODO" class="w-full placeholder-gray-900 rounded-xl bg-gray-200 px-4 py-2 pl-8">
+            <input type="search" placeholder="Find a TODO" class="w-full placeholder-gray-900 rounded-xl bg-gray-100 px-4 py-2 pl-8">
         </div>
     </div>
 
@@ -28,7 +28,7 @@
                 </div>
                 <div class="mx-4 w-4/5">
                     <div class="flex items-center">
-                        <h4 class="text-xl font-semibold">
+                        <h4 class="text-xl font-semibold cursor-pointer">
                             A random todo title can go here
                         </h4>
                         <div class="flex items-center space-x-2">
@@ -69,7 +69,7 @@
                 </div>
                 <div class="mx-4 w-4/5">
                     <div class="flex items-center">
-                        <h4 class="text-xl font-semibold">
+                        <h4 class="text-xl font-semibold cursor-pointer">
                             A random todo title can go here
                         </h4>
                         <div class="flex items-center space-x-2">
@@ -110,7 +110,7 @@
                 </div>
                 <div class="mx-4 w-4/5">
                     <div class="flex items-center">
-                        <h4 class="text-xl font-semibold">
+                        <h4 class="text-xl font-semibold cursor-pointer">
                             A random todo title can go here
                         </h4>
                         <div class="flex items-center space-x-2">
