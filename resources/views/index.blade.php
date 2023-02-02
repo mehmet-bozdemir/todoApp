@@ -22,11 +22,11 @@
 
     <div class="todos-container space-y-6 my-6">
         <div class="todo-container rounded-xl bg-gray-100 hover:shadow-md transition duration-200 ease-in">
-            <div class="flex px-2 py-6 justify-between">
+            <div class="flex px-2 py-6">
                 <div class="mx-4 flex items-center justify-center w-1/5">
-                    <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dG9kb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" alt="todo" class="w-22 h-22 rounded-xl">
+                    <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dG9kb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" alt="todo" class="w-18 h-18 rounded-xl">
                 </div>
-                <div class="mx-4 w-4/5">
+                <div class="mx-4 flex-1 w-full">
                     <div class="flex items-center">
                         <h4 class="text-xl font-semibold cursor-pointer">
                             A random todo title can go here
@@ -63,11 +63,11 @@
             </div>
         </div>
         <div class="todo-container rounded-xl bg-gray-100 hover:shadow-md transition duration-200 ease-in">
-            <div class="flex px-2 py-6 justify-between">
+            <div class="flex px-2 py-6">
                 <div class="mx-4 flex items-center justify-center w-1/5">
-                    <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dG9kb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" alt="todo" class="w-22 h-22 rounded-xl">
+                    <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dG9kb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" alt="todo" class="w-18 h-18 rounded-xl">
                 </div>
-                <div class="mx-4 w-4/5">
+                <div class="mx-4 flex-1 w-full">
                     <div class="flex items-center">
                         <h4 class="text-xl font-semibold cursor-pointer">
                             A random todo title can go here
@@ -104,11 +104,11 @@
             </div>
         </div>
         <div class="todo-container rounded-xl bg-gray-100 hover:shadow-md transition duration-200 ease-in">
-            <div class="flex px-2 py-6 justify-between">
+            <div class="flex px-2 py-6">
                 <div class="mx-4 flex items-center justify-center w-1/5">
-                    <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dG9kb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" alt="todo" class="w-22 h-22 rounded-xl">
+                    <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dG9kb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" alt="todo" class="w-18 h-18 rounded-xl">
                 </div>
-                <div class="mx-4 w-4/5">
+                <div class="mx-4 flex-1 w-full">
                     <div class="flex items-center">
                         <h4 class="text-xl font-semibold cursor-pointer">
                             A random todo title can go here
