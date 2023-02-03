@@ -1,6 +1,6 @@
 <x-app-layout>
     <div>
-        <a href="" class="flex items-center font-semibold hover:underline">
+        <a href="{{route('todo.index')}}" class="flex items-center font-semibold hover:underline">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
             </svg>
@@ -16,7 +16,7 @@
             <div class="mx-4 flex-1 w-full">
                 <div class="flex items-center">
                     <h4 class="text-xl font-semibold">
-                        A random todo title can go here
+                        {{$todo->title}}
                     </h4>
                     <div class="flex items-center space-x-2">
                         <div class="bg-green-300 text-xs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
@@ -25,12 +25,12 @@
                     </div>
                 </div>
                 <div class="text-gray-600 mt-3">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur doloribus enim facilis, fugiat magni quasi quis quod ratione repellendus repudiandae sunt tempora veniam! Distinctio explicabo harum laudantium magni modi pariatur quia voluptate? Aspernatur at eum facere fuga minima, nam quidem quisquam recusandae tenetur voluptates? Dolor dolorum facilis fuga ipsum sequi!</p>
+                    <p>{{$todo->description}}</p>
                 </div>
                 <div class="flex items-center justify-between mt-6">
                     <div class="flex items-center text-xs font-semibold space-x-2">
-                        <div class="font-bold text-gray-900">John Doe</div>
-                        <div>10 hours ago</div>
+                        <div class="font-bold text-gray-900">{{$todo->user->name}}</div>
+                        <div>{{$todo->created_at->diffForHumans()}}</div>
                         <div>&bull;</div>
                         <div>Category 1</div>
                         <div>&bull;</div>

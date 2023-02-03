@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TodoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,9 +19,8 @@ use Illuminate\Support\Facades\Route;
 //    return view('welcome');
 //});
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [TodoController::class, 'index'])->name('todo.index');
+Route::get('/todos/{todo}', [TodoController::class, 'show'])->name('todo.show');
 
 Route::view('/todo', 'show');
 
