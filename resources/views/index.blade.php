@@ -1,6 +1,6 @@
 <x-app-layout>
-    <div class="filters flex space-x-6">
-        <div class="w-1/3">
+    <div class="filters flex flex-col md:flex-row md:space-x-6 space-y-3 md:space-y-0">
+        <div class="w-full md:w-1/3">
             <select name="category" id="category" class="w-full rounded-xl bg-gray-100 px-4 py-2">
                 <option value="Actegory One"> Category one</option>
                 <option value="Actegory Two"> Category two</option>
@@ -9,7 +9,7 @@
             </select>
         </div>
 
-        <div class="w-2/3 relative">
+        <div class="w-full md:w-2/3 relative">
             <div class="absolute top-0 flex items-center h-full ml-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
@@ -22,12 +22,12 @@
 
     <div class="todos-container space-y-6 my-6">
         <div class="todo-container rounded-xl bg-gray-100 hover:shadow-md transition duration-200 ease-in">
-            <div class="flex px-2 py-6">
-                <div class="mx-4 flex items-center justify-center w-1/5">
+            <div class="flex flex-col items-center lg:flex-row  px-2 py-6">
+                <div class="mx-2 flex items-center justify-center w-1/3 lg:w-1/5">
                     <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dG9kb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" alt="todo" class="w-18 h-18 rounded-xl">
                 </div>
                 <div class="mx-4 flex-1 w-full">
-                    <div class="flex items-center">
+                    <div class="flex flex-col lg:flex-row items-center">
                         <h4 class="text-xl font-semibold cursor-pointer">
                             A random todo title can go here
                         </h4>
@@ -38,9 +38,9 @@
                         </div>
                     </div>
                     <div class="text-gray-600 mt-3">
-                        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                        <p class="line-clamp-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid corporis delectus dignissimos, doloribus et excepturi fugit id ipsa iste nam nesciunt nobis odio pariatur quasi qui quidem sed similique, sit tempore, voluptatibus. Ad corporis, cupiditate delectus dolorum inventore laudantium molestias numquam quaerat, repellendus, sint suscipit voluptas? Aspernatur aut culpa sunt.</p>
                     </div>
-                    <div class="flex items-center justify-between mt-6">
+                    <div class="flex flex-col lg:flex-row items-center justify-between mt-6">
                         <div class="flex items-center text-xs font-semibold space-x-2">
                             <div>10 hours ago</div>
                             <div>&bull;</div>
@@ -52,8 +52,6 @@
                             <div class="bg-gray-200 text-xs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
                                 Edit
                             </div>
-                        </div>
-                        <div class="flex items-center space-x-2">
                             <div class="bg-gray-200 text-xs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
                                 Delete
                             </div>
@@ -63,12 +61,12 @@
             </div>
         </div>
         <div class="todo-container rounded-xl bg-gray-100 hover:shadow-md transition duration-200 ease-in">
-            <div class="flex px-2 py-6">
-                <div class="mx-4 flex items-center justify-center w-1/5">
+            <div class="flex flex-col items-center lg:flex-row  px-2 py-6">
+                <div class="mx-2 flex items-center justify-center w-1/3 lg:w-1/5">
                     <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dG9kb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" alt="todo" class="w-18 h-18 rounded-xl">
                 </div>
                 <div class="mx-4 flex-1 w-full">
-                    <div class="flex items-center">
+                    <div class="flex flex-col lg:flex-row items-center">
                         <h4 class="text-xl font-semibold cursor-pointer">
                             A random todo title can go here
                         </h4>
@@ -79,9 +77,9 @@
                         </div>
                     </div>
                     <div class="text-gray-600 mt-3">
-                        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                        <p class="line-clamp-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid corporis delectus dignissimos, doloribus et excepturi fugit id ipsa iste nam nesciunt nobis odio pariatur quasi qui quidem sed similique, sit tempore, voluptatibus. Ad corporis, cupiditate delectus dolorum inventore laudantium molestias numquam quaerat, repellendus, sint suscipit voluptas? Aspernatur aut culpa sunt.</p>
                     </div>
-                    <div class="flex items-center justify-between mt-6">
+                    <div class="flex flex-col lg:flex-row items-center justify-between mt-6">
                         <div class="flex items-center text-xs font-semibold space-x-2">
                             <div>10 hours ago</div>
                             <div>&bull;</div>
@@ -93,8 +91,6 @@
                             <div class="bg-gray-200 text-xs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
                                 Edit
                             </div>
-                        </div>
-                        <div class="flex items-center space-x-2">
                             <div class="bg-gray-200 text-xs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
                                 Delete
                             </div>
@@ -104,12 +100,12 @@
             </div>
         </div>
         <div class="todo-container rounded-xl bg-gray-100 hover:shadow-md transition duration-200 ease-in">
-            <div class="flex px-2 py-6">
-                <div class="mx-4 flex items-center justify-center w-1/5">
+            <div class="flex flex-col items-center lg:flex-row  px-2 py-6">
+                <div class="mx-2 flex items-center justify-center w-1/3 lg:w-1/5">
                     <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dG9kb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" alt="todo" class="w-18 h-18 rounded-xl">
                 </div>
                 <div class="mx-4 flex-1 w-full">
-                    <div class="flex items-center">
+                    <div class="flex flex-col lg:flex-row items-center">
                         <h4 class="text-xl font-semibold cursor-pointer">
                             A random todo title can go here
                         </h4>
@@ -120,9 +116,9 @@
                         </div>
                     </div>
                     <div class="text-gray-600 mt-3">
-                        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                        <p class="line-clamp-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid corporis delectus dignissimos, doloribus et excepturi fugit id ipsa iste nam nesciunt nobis odio pariatur quasi qui quidem sed similique, sit tempore, voluptatibus. Ad corporis, cupiditate delectus dolorum inventore laudantium molestias numquam quaerat, repellendus, sint suscipit voluptas? Aspernatur aut culpa sunt.</p>
                     </div>
-                    <div class="flex items-center justify-between mt-6">
+                    <div class="flex flex-col lg:flex-row items-center justify-between mt-6">
                         <div class="flex items-center text-xs font-semibold space-x-2">
                             <div>10 hours ago</div>
                             <div>&bull;</div>
@@ -134,8 +130,6 @@
                             <div class="bg-gray-200 text-xs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
                                 Edit
                             </div>
-                        </div>
-                        <div class="flex items-center space-x-2">
                             <div class="bg-gray-200 text-xs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
                                 Delete
                             </div>
