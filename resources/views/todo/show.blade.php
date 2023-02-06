@@ -32,7 +32,7 @@
                         <div class="font-bold text-gray-900">{{$todo->user->name}}</div>
                         <div>{{$todo->created_at->diffForHumans()}}</div>
                         <div>&bull;</div>
-                        <div>Category 1</div>
+                        <div>{{$todo->category->name}}</div>
                         <div>&bull;</div>
                         <div>3 comments</div>
                     </div>

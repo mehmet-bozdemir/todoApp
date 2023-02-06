@@ -29,7 +29,7 @@
                     </div>
                     <div class="mx-4 flex-1 w-full">
                         <div class="flex flex-col lg:flex-row items-center">
-                            <h4 class="text-xl font-semibold cursor-pointer">
+                            <h4 class="todo-link text-xl font-semibold cursor-pointer">
                                 <a href="{{ route('todo.show', $todo) }}">{{$todo->title}}</a>
                             </h4>
                             <div class="flex items-center space-x-2">
@@ -45,7 +45,7 @@
                             <div class="flex items-center text-xs font-semibold space-x-2">
                                 <div>{{$todo->created_at->diffForHumans()}}</div>
                                 <div>&bull;</div>
-                                <div>Category 1</div>
+                                <div>{{$todo->category->name}}</div>
                                 <div>&bull;</div>
                                 <div>3 comments</div>
                             </div>
