@@ -25,7 +25,7 @@
             <div class="todo-container rounded-xl bg-gray-100 hover:shadow-md transition duration-200 ease-in">
                 <div class="flex flex-col items-center lg:flex-row  px-2 py-6">
                     <div class="mx-2 flex items-center justify-center w-1/3 lg:w-1/5">
-                        <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dG9kb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" alt="todo" class="w-18 h-18 rounded-xl">
+                        <img src="{{ Storage::url($todo->image) }}" alt="todo" class="w-18 h-18 rounded-xl">
                     </div>
                     <div class="mx-4 flex-1 w-full">
                         <div class="flex flex-col lg:flex-row items-center">
