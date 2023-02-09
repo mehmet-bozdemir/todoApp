@@ -33,8 +33,8 @@
                                 <a href="{{ route('todo.show', $todo) }}">{{$todo->title}}</a>
                             </h4>
                             <div class="flex items-center space-x-2">
-                                <div class="bg-green-300 text-xs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
-                                    Done
+                                <div class="{{$todo->getTodoClass()}} text-xs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
+                                    {{$todo->status->name}}
                                 </div>
                             </div>
                         </div>
@@ -53,9 +53,10 @@
                                 <div class="bg-gray-200 text-xs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
                                     Edit
                                 </div>
-                                <div class="bg-gray-200 text-xs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
-                                    Delete
-                                </div>
+{{--                                <livewire:edit-todo :todo="$todo"/>--}}
+                                @auth()
+                                    <livewire:delete-todo :todo="$todo"/>
+                                @endauth
                             </div>
                         </div>
                     </div>

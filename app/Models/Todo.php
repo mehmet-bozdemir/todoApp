@@ -19,4 +19,22 @@ class Todo extends Model
     {
         return $this->belongsTo(Category::class);
     }
+
+    public function status()
+    {
+        return $this->belongsTo(Status::class);
+    }
+
+    public function getTodoClass()
+    {
+        $allStatuses = [
+            'Done' => 'bg-green-300',
+            'Pending' => 'text-red-400'
+        ];
+
+        return $allStatuses[$this->status->name];
+    }
+
+
+
 }

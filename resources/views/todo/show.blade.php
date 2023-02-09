@@ -19,10 +19,13 @@
                         {{$todo->title}}
                     </h4>
                     <div class="flex items-center space-x-2">
-                        <div class="bg-green-300 text-xs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
-                            Done
+                        <div class="{{$todo->getTodoClass()}} text-xs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
+                            {{$todo->status->name}}
                         </div>
                     </div>
+                    @if($todo->status_id == 1)
+                        <livewire:change-status :todo="$todo"/>
+                    @endif
                 </div>
                 <div class="text-gray-600 mt-3">
                     <p>{{$todo->description}}</p>
@@ -37,19 +40,18 @@
                         <div>3 comments</div>
                     </div>
                     <div class="flex items-center space-x-2">
-                        <div class="bg-gray-200 text-xs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
+                        <a href="{{route('todo.edit', $todo)}}" class="bg-gray-200 text-xs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
                             Edit
-                        </div>
+                        </a>
                     </div>
-                    <div class="flex items-center space-x-2">
-                        <div class="bg-gray-200 text-xs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
-                            Delete
-                        </div>
-                    </div>
+                    @auth()
+                        <livewire:delete-todo :todo="$todo"/>
+                    @endauth
                 </div>
             </div>
         </div>
     </div>
+
 
     <div class="similar-todos-container my-6" >
         <div class="flex space-x-6  similar-todo">
@@ -78,5 +80,4 @@
             </div>
         </div>
     </div>
-
 </x-app-layout>

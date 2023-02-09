@@ -21,8 +21,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [TodoController::class, 'index'])->name('todo.index');
 Route::get('/todos/{todo}', [TodoController::class, 'show'])->name('todo.show');
+Route::get('/todos/{todo}/edit', [TodoController::class, 'edit'])->name('todo.edit');
+Route::put('/todos/{todo}', [TodoController::class, 'update'])->name('todo.update');
 
-Route::view('/todo', 'show');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
