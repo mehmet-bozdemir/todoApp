@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Category;
+use App\Models\Status;
 use App\Models\Todo;
 use Illuminate\Database\Seeder;
 
@@ -26,6 +27,9 @@ class DatabaseSeeder extends Seeder
         Category::factory()->create(['name' => 'Home']);
         Category::factory()->create(['name' => 'Work']);
         Category::factory()->create(['name' => 'Shopping']);
+
+        Status::factory()->create(['name' => 'Pending']);
+        Status::factory()->create(['name' => 'Done']);
 
         Todo::factory(20)->create();
 
