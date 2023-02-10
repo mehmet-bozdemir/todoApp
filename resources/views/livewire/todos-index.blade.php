@@ -43,11 +43,10 @@
                         </div>
                         <div class="flex flex-col lg:flex-row items-center justify-between mt-6">
                             <div class="flex items-center text-xs font-semibold space-x-2">
+                                <div class="font-bold text-gray-900">{{$todo->user->name}}</div>
                                 <div>{{$todo->created_at->diffForHumans()}}</div>
                                 <div>&bull;</div>
                                 <div>{{$todo->category->name}}</div>
-                                <div>&bull;</div>
-                                <div>3 comments</div>
                             </div>
                             <div class="flex items-center space-x-2">
                                 <div class="bg-gray-200 text-xs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
