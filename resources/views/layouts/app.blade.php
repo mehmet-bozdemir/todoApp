@@ -73,20 +73,7 @@
                 </div>
             </div>
             <div class="w-full md:w-175">
-                <nav class="hidden md:flex items-center justify-between text-xs">
-                    <ul class="flex uppercase font-semibold border-b-4 pb-3 space-x-10">
-                        <li><a href="#" class="border-b-4 pb-3 border-blue-300">All Todos (87)</a></li>
-                        <li><a href="#" class="text-gray-400 transition duration-100 ease-in border-b-4 pb-3 hover:border-blue-300">Shopping (44)</a></li>
-                        <li><a href="#" class="text-gray-400 transition duration-100 ease-in border-b-4 pb-3 hover:border-blue-300">Chores (8)</a></li>
-                        <li><a href="#" class="text-gray-400 transition duration-100 ease-in border-b-4 pb-3 hover:border-blue-300">Work (25)</a></li>
-                    </ul>
-
-                    <ul class="hidden flex uppercase font-semibold border-b-4 pb-3 space-x-10">
-                        <li><a href="#" class="text-gray-400 transition duration-100 ease-in border-b-4 pb-3 hover:border-blue-300">Shopping</a></li>
-                        <li><a href="#" class="text-gray-400 transition duration-100 ease-in border-b-4 pb-3 hover:border-blue-300">Chores</a></li>
-                        <li><a href="#" class="text-gray-400 transition duration-100 ease-in border-b-4 pb-3 hover:border-blue-300">Work</a></li>
-                    </ul>
-                </nav>
+                <livewire:status-filters/>
 
                 <div class="mt-8">
                     {{$slot}}
