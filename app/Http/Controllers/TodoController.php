@@ -52,7 +52,10 @@ class TodoController extends Controller
      */
     public function show(Todo $todo)
     {
-        $similarTodos = Todo::where('category_id', $todo->category_id)->latest()->take(3)->get();
+        $categoryItems = Todo::where('category_id', $todo->category_id)->latest()->take(4)->get();
+        $similarTodos = $categoryItems->whereNotIn('id', $todo->id);
+
+
         return view('todo.show', [
             'todo' => $todo,
             'similarTodos' => $similarTodos,

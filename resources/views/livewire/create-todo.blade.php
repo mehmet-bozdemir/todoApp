@@ -26,19 +26,19 @@
             <img class="rounded-lg" src="{{ $newImage->temporaryUrl() }}">
         </div>
     @endif
-    <div class="flex items-center space-between space-x-3">
+    <div class="flex flex-col sm:flex-row items-center space-between sm:space-x-3 space-y-3 sm:space-y-0">
 
-            <label for="dropzone-file" class="flex space-x-3 items-center justify-center w-1/2 h-11 text-xs bg-gray-200 font-semibold rounded-xl border border-gray-200 hover:border-gray-400 transition duration-150 ease-in px-6 py-3 cursor-pointer">
+            <label for="dropzone-file" class="flex space-x-3 items-center justify-center w-full sm:w-1/2 h-11 text-xs bg-gray-200 font-semibold rounded-xl border border-gray-200 hover:border-gray-400 transition duration-150 ease-in px-6 py-3 cursor-pointer">
                 <svg aria-hidden="true" class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
                 <span class="text-center">Add Image</span>
                 <input wire:model.defer="newImage" name="image" id="dropzone-file" type="file" class="hidden" />
             </label>
 
-        <button type="submit" class="flex items-center justify-center w-1/2 h-11 text-xs bg-green-300 font-bold rounded-xl border border-gray-200 hover:border-gray-400 transition duration-150 ease-in px-6 py-3 uppercase">
+        <button type="submit" class="flex items-center justify-center w-full sm:w-1/2 h-11 text-xs bg-green-300 font-bold rounded-xl border border-gray-200 hover:border-gray-400 transition duration-150 ease-in px-6 py-3 uppercase">
             <span>Submit</span>
         </button>
     </div>
-    
+
     <div>
         @if(session('success_message'))
             <div
