@@ -6,11 +6,29 @@ use App\Http\Requests\StoreTodoRequest;
 use App\Http\Requests\UpdateTodoRequest;
 use App\Models\Category;
 use App\Models\Todo;
+use App\Repositories\CategoryRepository;
+use App\Repositories\TodoRepository;
 use Illuminate\Http\Request;
 
 
 class TodoController extends Controller
 {
+
+private $todoRepository;
+private $categoryRepository;
+
+    /**
+     * @param $todoRepository
+     */
+    public function __construct(
+        TodoRepository $todoRepository,
+        CategoryRepository $categoryRepository
+    )
+    {
+        $this->todoRepository = $todoRepository;
+        $this->categoryRepository = $categoryRepository;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -18,8 +36,9 @@ class TodoController extends Controller
      */
     public function index()
     {
+//        return $this->todoRepository->all();
         return view('todo.index', [
-            'todos' => Todo::with('user', 'category', 'status')->latest()->simplePaginate(5),
+            $this->todoRepository->todosWithRelations()
         ]);
     }
 
@@ -52,9 +71,7 @@ class TodoController extends Controller
      */
     public function show(Todo $todo)
     {
-        $categoryItems = Todo::where('category_id', $todo->category_id)->latest()->take(4)->get();
-        $similarTodos = $categoryItems->whereNotIn('id', $todo->id);
-
+        $similarTodos = $this->todoRepository->findSimilarTodos($todo);
 
         return view('todo.show', [
             'todo' => $todo,
@@ -72,11 +89,9 @@ class TodoController extends Controller
     {
         return view('todo.edit', [
             'todo' => $todo,
-            'categories' => Category::all()
+            'categories' => $this->categoryRepository->all(),
         ]);
     }
-
-
 
     public function update(Request $request, Todo $todo)
     {
