@@ -11,7 +11,11 @@
     <div class="todo-container rounded-xl bg-gray-100 mt-4">
         <div class="flex flex-col md:flex-row items-center justify-center px-2 py-6">
             <div class="mx-4 flex items-center justify-center w-1/5">
-                <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dG9kb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" alt="todo" class="w-18 h-18 rounded-xl">
+                @if($todo->image)
+                    <img src="{{ Storage::url($todo->image) }}" alt="todo" class="w-18 h-18 rounded-xl">
+                @else
+                    <img src="https://via.placeholder.com/300/09f/fff.png" alt="todo" class="w-18 h-18 rounded-xl">
+                @endif
             </div>
             <div class="mx-4 flex-1 w-full">
                 <div class="flex items-center">
@@ -37,12 +41,12 @@
                         <div>&bull;</div>
                         <div>{{$todo->category->name}}</div>
                     </div>
-                    <div class="flex items-center space-x-2">
-                        <a href="{{route('todo.edit', $todo)}}" class="bg-gray-200 text-xs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
-                            Edit
-                        </a>
-                    </div>
                     @auth()
+                        <div class="flex items-center space-x-2">
+                            <a href="{{route('todo.edit', $todo)}}" class="bg-gray-200 text-xs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
+                                Edit
+                            </a>
+                        </div>
                         <livewire:delete-todo :todo="$todo"/>
                     @endauth
                 </div>
@@ -58,7 +62,11 @@
             <div class="similar-todo-container lg:w-1/3 rounded-xl bg-gray-100 mb-6 hover:shadow-md transition duration-200 ease-in">
                 <div class="flex flex-col items-center px-2 py-6">
                     <div class="mx-2 flex items-center justify-center w-1/3 lg:w-1/5">
-                        <img src="{{ Storage::url($similarTodo->image) }}" alt="todo" class="w-18 h-18 rounded-xl">
+                        @if($similarTodo->image)
+                            <img src="{{ Storage::url($similarTodo->image) }}" alt="todo" class="w-18 h-18 rounded-xl">
+                        @else
+                            <img src="https://via.placeholder.com/300/09f/fff.png" alt="todo" class="w-18 h-18 rounded-xl">
+                        @endif
                     </div>
                     <div class="mx-4 flex-1 w-full">
                         <div class="flex flex-col items-center">
