@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>todo1livewire</title>
+        <title>todoapp</title>
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Open+Sans:wght@400;600;700&display=swap">
@@ -17,7 +17,7 @@
     </head>
     <body class="font-sans txt-gray-900 text-sm">
         <header class="flex flex-col md:flex-row items-center justify-between px-8 py-4">
-            <a href="#"><img src="{{asset('img/MyLogo.png')}}" class="w-10 h-10 rounded-full" alt="logo"></a>
+            <a href="#"><img src="{{asset('img/todoAppLogo.png')}}" class="w-20 h-20 rounded-full border border-green-300" alt="logo"></a>
             <div class="flex items-center mt-2 md:mt-0">
                 @if (Route::has('login'))
                     <div class="px-6 py-4">
